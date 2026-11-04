@@ -1,0 +1,71 @@
+id,name,title,tags,partype,difficulty,hp,hpperlevel,mp,mpperlevel,armor,armorperlevel,attackdamage,attackdamageperlevel
+Aatrox,Aatrox,the Darkin Blade,Fighter,Blood Well,4,650,114,0,0,38,4.45,60,5.0
+Ahri,Ahri,the Nine-Tailed Fox,Mage,Mana,5,590,96,418,25,21,4.7,53,3.0
+Akali,Akali,the Rogue Assassin,Assassin,Energy,7,570,119,200,0,23,4.7,62,3.3
+Alistar,Alistar,the Minotaur,Tank,Mana,7,685,120,350,40,47,4.7,62,3.75
+Amumu,Amumu,the Sad Mummy,Tank,Mana,3,685,94,285,40,33,4.0,53,3.8
+Annie,Annie,the Dark Child,Mage,Mana,6,560,102,418,25,19,4.7,50,2.65
+Ashe,Ashe,the Frost Archer,Marksman,Mana,4,640,101,280,35,26,4.6,59,2.95
+AurelionSol,Aurelion Sol,The Star Forger,Mage,Mana,7,620,100,530,40,22,4.0,55,3.2
+Azir,Azir,the Emperor of the Sands,Mage,Mana,9,550,119,320,40,22,5.0,52,3.5
+Blitzcrank,Blitzcrank,the Great Steam Golem,Tank,Mana,4,650,109,267,40,40,4.7,62,3.5
+Braum,Braum,the Heart of the Freljord,Support,Mana,3,610,112,311,45,47,5.2,55,3.2
+Caitlyn,Caitlyn,the Sheriff of Piltover,Marksman,Mana,6,580,107,315,40,27,4.7,60,3.8
+Camille,Camille,the Steel Shadow,Fighter,Mana,4,670,99,339,52,35,5.0,68,3.8
+Chogath,Cho'Gath,the Terror of the Void,Tank,Mana,5,644,94,270,60,38,5.0,69,4.2
+Darius,Darius,the Hand of Noxus,Fighter,Mana,2,652,114,263,58,39,5.2,64,5.0
+Diana,Diana,Scorn of the Moon,Fighter,Mana,4,640,109,375,25,31,4.3,57,3.0
+Draven,Draven,the Glorious Executioner,Marksman,Mana,8,675,104,361,39,29,4.5,62,3.6
+Ekko,Ekko,the Boy Who Shattered Time,Assassin,Mana,8,655,99,280,70,32,4.2,58,3.0
+Ezreal,Ezreal,the Prodigal Explorer,Marksman,Mana,7,600,102,375,70,24,4.7,62,2.5
+Fiora,Fiora,the Grand Duelist,Fighter,Mana,3,620,99,300,60,33,4.7,68,3.3
+Garen,Garen,The Might of Demacia,Fighter,None,5,690,98,,,38,4.2,69,4.5
+Hecarim,Hecarim,the Shadow of War,Fighter,Mana,6,625,99,277,60,32,5.45,66,3.2
+Irelia,Irelia,the Blade Dancer,Fighter,Mana,5,590,124,350,50,36,4.7,65,4.0
+Janna,Janna,the Storm's Fury,Support,Mana,7,570,90,360,50,28,4.5,47,2.5
+Jax,Jax,Grandmaster at Arms,Fighter,Mana,5,665,100,339,52,36,4.2,68,4.25
+Jhin,Jhin,the Virtuoso,Marksman,Mana,6,655,107,300,50,24,4.7,59,4.7
+Jinx,Jinx,the Loose Cannon,Marksman,Mana,6,630,105,260,50,26,4.7,59,3.15
+Kaisa,Kai'Sa,Daughter of the Void,Marksman,Mana,6,640,102,345,40,25,4.2,59,2.6
+Karma,Karma,the Enlightened One,Mage,Mana,5,604,109,374,40,28,5.0,51,3.3
+Katarina,Katarina,the Sinister Blade,Assassin,None,8,672,108,,,28,4.7,58,3.2
+Kayle,Kayle,the Righteous,Fighter,Mana,7,670,92,330,50,26,4.2,50,2.5
+Khazix,Kha'Zix,the Voidreaver,Assassin,Mana,6,643,99,327,40,32,4.2,60,3.1
+LeeSin,Lee Sin,the Blind Monk,Fighter,Energy,6,645,105,200,0,36,4.9,66,3.7
+Leona,Leona,the Radiant Dawn,Tank,Mana,4,646,101,302,40,47,4.8,60,3.0
+Lulu,Lulu,the Fae Sorceress,Support,Mana,5,595,92,350,55,26,4.9,47,2.6
+Lux,Lux,the Lady of Luminosity,Mage,Mana,5,580,99,480,23.5,21,5.2,54,3.3
+Malphite,Malphite,Shard of the Monolith,Tank,Mana,2,644,104,280,60,37,4.95,62,4.0
+Maokai,Maokai,the Twisted Treant,Tank,Mana,3,635,109,377,43,35,5.2,64,3.3
+MasterYi,Master Yi,the Wuju Bladesman,Assassin,Mana,4,669,100,251,42,33,4.2,65,2.2
+MissFortune,Miss Fortune,the Bounty Hunter,Marksman,Mana,1,640,103,300,40,28,4.2,52,2.4
+Mordekaiser,Mordekaiser,the Iron Revenant,Fighter,Shield,4,645,104,,,37,4.2,61,4.0
+Morgana,Morgana,the Fallen,Mage,Mana,1,630,104,340,60,25,5.0,56,3.5
+Nami,Nami,the Tidecaller,Support,Mana,5,560,88,365,43,29,5.2,51,3.1
+Nasus,Nasus,the Curator of the Sands,Fighter,Mana,6,631,104,326,62,34,4.7,67,4.0
+Nautilus,Nautilus,the Titan of the Depths,Tank,Mana,6,646,100,400,47,39,4.95,61,3.3
+Orianna,Orianna,the Lady of Clockwork,Mage,Mana,7,585,110,418,25,20,4.7,40,2.6
+Pyke,Pyke,the Bloodharbor Ripper,Support,Mana,7,670,110,415,50,45,4.7,62,2.0
+Riven,Riven,the Exile,Fighter,None,8,630,100,,,33,4.4,64,3.0
+Sejuani,Sejuani,Fury of the North,Tank,Mana,4,630,114,400,40,34,5.45,66,4.0
+Senna,Senna,the Redeemer,Marksman,Mana,7,530,89,350,45,28,4.7,50,0.0
+Sett,Sett,the Boss,Fighter,Grit,2,670,114,0,0,33,5.2,60,4.0
+Soraka,Soraka,the Starchild,Support,Mana,3,605,88,425,40,32,5.0,50,3.0
+Swain,Swain,the Noxian Grand General,Mage,Mana,8,595,99,468,29,26,5.2,58,2.7
+Sylas,Sylas,the Unshackled,Mage,Mana,5,575,129,400,70,27,5.2,61,3.0
+Syndra,Syndra,the Dark Sovereign,Mage,Mana,8,563,104,480,40,25,4.6,54,2.9
+Thresh,Thresh,the Chain Warden,Support,Mana,7,600,120,274,44,33,0.0,56,2.2
+Tristana,Tristana,the Yordle Gunner,Marksman,Mana,4,640,102,250,32,30,4.5,59,3.7
+Vayne,Vayne,the Night Hunter,Marksman,Mana,8,550,103,232,35,23,4.6,60,2.35
+Veigar,Veigar,the Tiny Master of Evil,Mage,Mana,7,580,108,490,26,21,5.2,52,2.7
+Vi,Vi,the Piltover Enforcer,Fighter,Mana,4,655,99,295,65,30,4.7,63,3.0
+Viego,Viego,The Ruined King,Assassin,None,5,630,119,0,0,34,5.2,57,3.5
+Viktor,Viktor,the Machine Herald,Mage,Mana,9,600,104,405,45,23,5.2,53,3.0
+Volibear,Volibear,the Relentless Storm,Fighter,Mana,3,650,104,350,70,31,5.2,60,3.5
+Warwick,Warwick,the Uncaged Wrath of Zaun,Fighter,Mana,3,620,99,280,35,33,4.4,65,3.0
+Yasuo,Yasuo,the Unforgiven,Fighter,Flow,10,590,110,,,30,4.6,60,3.0
+Yone,Yone,the Unforgotten,Assassin,Flow,8,620,105,0,0,30,4.6,60,2.0
+Zed,Zed,the Master of Shadows,Assassin,Energy,7,654,99,200,0,32,4.7,63,3.4
+Ziggs,Ziggs,the Hexplosives Expert,Mage,Mana,4,606,106,480,23.5,22,4.5,54,3.1
+Zilean,Zilean,the Chronokeeper,Support,Mana,6,574,96,452,50,24,5.0,52,3.0
+Zyra,Zyra,Rise of the Thorns,Mage,Mana,7,574,93,418,25,29,4.2,53,3.2
