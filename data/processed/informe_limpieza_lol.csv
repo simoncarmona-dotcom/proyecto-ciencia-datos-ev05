@@ -1,0 +1,7 @@
+tabla,paso,filas,nulos,memoria_kb
+meta_stats,0_crudo,100,14,12.7
+meta_stats,1_limpio,96,0,7.4
+base_attributes,0_crudo,70,14,10.5
+base_attributes,1_limpio,70,0,7.9
+matches_perf,0_crudo,500,16,48.1
+matches_perf,1_limpio,500,0,31.1
