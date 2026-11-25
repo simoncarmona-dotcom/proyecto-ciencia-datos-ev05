@@ -4,7 +4,7 @@
 * **Ficha:** `3223873`
 * **Competencia:** `220501094` - Estructurar propuesta técnica de servicio de tecnología de la información según requisitos técnicos y normativa
 * **Resultado de Aprendizaje:** `220501094-01` - Definir especificaciones técnicas del software de acuerdo con las características del software a construir
-* **Evidencia de Aprendizaje:** `GA1-220501094-01-AA1-EV06` – Diagnosticar la calidad de datos: preparación, exploración y documentación
+* **Evidencia de Aprendizaje:** `GA1-220501094-01-AA1-EV05` – Diagnosticar la calidad de datos: preparación, exploración y documentación
 * **Aprendiz:** Simón Carmona Toro
 * **Instructor:** Carlos Enrique Navia Torres
 

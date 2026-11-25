@@ -1,145 +1,127 @@
-# Proyecto de Ciencia de Datos: Limpieza, Análisis y Estructuración con Pandas (Instacart)
+# Proyecto de Ciencia de Datos: Balance de Campeones, Dificultad Mecánica y Escalado en League of Legends
 
-* **Programa de Formación:** Tecnólogo en Análisis y Desarrollo de Software (ADSO) - Ficha 3223873
-* **Evidencia:** `GA1-220501094-01-AA1-EV06 – Limpieza, análisis y estructuración de datos con Pandas (instacart)`
+* **Programa de Formación:** Tecnólogo en Análisis y Desarrollo de Software (`228118`) - Ficha `3223873`
+* **Competencia:** `220501094` - Estructurar propuesta técnica de servicio de tecnología de la información según requisitos técnicos y normativa
+* **Evidencias Formativas Desarrolladas:**
+  - `GA1-220501094-01-AA1-EV05`: Diagnosticar la calidad de datos: preparación, exploración y documentación
+  - `GA1-220501094-01-AA1-EV06`: Limpieza, análisis y estructuración de datos con Pandas (Instacart)
+  - `GA1-220501094-01-AA1-EV07`: Preparación, limpieza y estructuración de datos del proyecto individual con Pandas (*League of Legends*)
 * **Aprendiz:** Simón Carmona Toro
 * **Instructor:** Carlos Enrique Navia Torres
-* **Repositorio:** [proyecto-ciencia-datos-ev05](https://github.com/simoncarmona-dotcom/proyecto-ciencia-datos-ev05.git)
-* **Rama de Trabajo:** `ev06`
+* **Repositorio GitHub:** [proyecto-ciencia-datos-ev05](https://github.com/simoncarmona-dotcom/proyecto-ciencia-datos-ev05.git)
 
 ---
 
-## 1. Descripción del Proyecto
+## 1. Descripción del Proyecto Individual
 
-Este repositorio contiene la solución completa de la evidencia formativa **GA1-220501094-01-AA1-EV06**, en la cual se prepara y estructura el conjunto de datos de **Instacart Market Basket Analysis** mediante la biblioteca **Pandas** en Python 3.12.
+Este proyecto de ciencia de datos analiza de forma objetiva, utilizando **Python** y **Pandas**, el equilibrio competitivo de los campeones de **League of Legends** en función de su clase de rol (*Assassin*, *Fighter*, *Mage*, *Marksman*, *Support*, *Tank*), su índice oficial de dificultad mecánica (escala de 1 a 10) y la duración de los encuentros clasificatorios.
 
-Se abordan de forma rigurosa las lecciones 2, 3 y 4 del material formativo *Preparar y estructurar datos con Python*, desarrollando los **3 laboratorios guiados** y los **21 ejercicios de retos prácticos** (7 por cada lección), junto con la generación y almacenamiento de datasets procesados y la documentación analítica.
-
----
-
-## 2. Pregunta Orientadora
-
-> *¿Cómo preparar y estructurar los datos de Instacart para obtener información confiable sobre los hábitos de compra?*
+En la evidencia **EV07**, se ejecuta el flujo completo de **limpieza, estandarización, filtrado, agrupación, cálculo de indicadores e integración relacional** sobre los tres datasets del proyecto individual, dando continuidad directa al diagnóstico de calidad realizado en la **EV05**.
 
 ---
 
-## 3. Estructura del Repositorio
+## 2. Pregunta Analítica del Proyecto (EV02 / EV03 / EV05 / EV07)
 
-El proyecto conserva la organización estándar de proyectos de ciencia de datos solicitada en la guía:
+> *«¿De qué manera la clase de rol de un campeón (Asesino, Mago, Tirador, Tanque, Luchador o Soporte), su índice de dificultad mecánica y la duración total del encuentro influyen en la variación de su tasa de victoria (Win Rate), tasa de selección (Pick Rate) y tasa de bloqueo (Ban Rate) en el metajuego clasificatorio de League of Legends?»*
+
+---
+
+## 3. Fuentes de Datos Oficiales (Conformidad con Guía EV03, EV05 y EV07)
+
+En cumplimiento estricto con los portales de datos abiertos autorizados en la **página 6 de la guía de aprendizaje**, los datasets originales ubicados en `data/raw/` fueron obtenidos de:
+
+| Archivo en `data/raw/` | Dimensiones Crudas | Dimensiones Limpias | Fuente / Portal Autorizado | Descripción |
+| :--- | :---: | :---: | :--- | :--- |
+| `lol_champion_meta_stats.csv` | `100 x 11` | `96 x 12` | **Kaggle Datasets** (`vivovinco/league-of-legends-champion-stats`) | Estadísticas del metajuego por campeón y carril (`Win %`, `Pick %`, `Ban %`, `Role %`, `Tier`, `Score`, `Trend`, `KDA`). |
+| `lol_champions_base_attributes.csv` | `70 x 14` | `70 x 16` | **Riot Games Data Dragon / Kaggle** (`gyejr95/league-of-legends-champion-stats`) | Catálogo oficial de atributos base de fábrica, índice de dificultad mecánica (`1` a `10`) y crecimiento estadístico por nivel. |
+| `lol_ranked_matches_performance.csv` | `500 x 11` | `497 x 16` | **Google Dataset Search / Kaggle** (`paololol/league-of-legends-ranked-matches`) | Desempeño individual por partida clasificatoria, daño total infligido (`damage_dealt`), oro (`gold_earned`) y duración (`duration_sec`). |
+
+---
+
+## 4. Estructura del Repositorio
+
+El repositorio conserva los archivos de las actividades anteriores y amplía la estructura del proyecto utilizando nombres en inglés conforme a la página 25 de la guía:
 
 ```text
 proyecto-ciencia-datos/
-├── README.md                          # Instrucciones, contexto y resultados del proyecto
-├── .gitignore                         # Exclusiones de Git (entornos virtuales, caches)
-├── requirements.txt                   # Dependencias requeridas (pandas, numpy, pyarrow, jupyter)
+├── README.md                                      # Descripción, fuentes, transformaciones e instrucciones
+├── .gitignore                                     # Exclusiones de Git (entornos virtuales, caches)
+├── requirements.txt                               # Dependencias (pandas, numpy, pyarrow, jupyter, ipykernel)
 │
 ├── data/
-│   ├── raw/                           # Datasets originales sin modificar
-│   │   ├── instacart_orders.csv       # 478,967 registros históricos de pedidos
-│   │   ├── order_products.csv         # 4,545,007 transacciones de artículos en carritos
-│   │   ├── products.csv               # 49,694 productos del catálogo general
-│   │   ├── aisles.csv                 # 134 pasillos de la tienda
-│   │   └── departments.csv            # 21 departamentos o categorías
+│   ├── raw/                                       # Datasets originales sin modificaciones
+│   │   ├── lol_champion_meta_stats.csv            # Metajuego competitivo por campeón y rol (100 filas)
+│   │   ├── lol_champions_base_attributes.csv      # Atributos base y dificultad mecánica (70 filas)
+│   │   ├── lol_ranked_matches_performance.csv     # Desempeño en partidas clasificatorias (500 filas)
+│   │   └── (datasets de práctica Instacart EV06)
 │   │
-│   └── processed/                     # Datasets procesados y optimizados generados
-│       ├── cleaned_instacart_orders.csv   # Pedidos limpios con segmentos y franjas
-│       ├── cleaned_products.csv           # Catálogo sin nulos y con nombres estandarizados
-│       ├── ficha_productos.parquet        # Métricas agregadas por producto (Parquet)
-│       ├── ficha_productos.csv            # Métricas agregadas por producto (CSV)
-│       ├── lideres_por_departamento.csv   # Producto con mayor fidelidad por departamento
-│       ├── resumen_departamentos.csv      # Volúmenes y tasa de recompra departamental
-│       ├── perfil_habitos_compra.csv      # Distribución de clientes y compras por segmento
-│       └── informe_limpieza.csv           # Auditoría cuantitativa del pipeline de limpieza
+│   └── processed/                                 # Datasets limpios, validados y estructurados
+│       ├── lol_master_analytics.csv               # Tabla maestra de partidas (497 filas x 40 columnas)
+│       ├── lol_master_analytics.parquet           # Tabla maestra de partidas en formato binario Parquet
+│       ├── lol_champions_consolidated.csv         # Ficha consolidada campeón-rol (96 filas x 31 columnas)
+│       ├── lol_champions_consolidated.parquet     # Ficha consolidada campeón-rol en formato Parquet
+│       ├── cleaned_lol_champion_meta.csv          # Dataset de metajuego limpio y tipado (96 filas)
+│       ├── cleaned_lol_base_attributes.csv        # Catálogo base limpio con llave normalizada (70 filas)
+│       ├── cleaned_lol_matches_performance.csv    # Partidas válidas >= 300s con DPM y KDA (497 filas)
+│       ├── resumen_clase_rol.csv                  # Indicador 1: Balance competitivo por Clase y Rol
+│       ├── resumen_dificultad.csv                 # Indicador 2: Curva de efectividad por Dificultad
+│       ├── resumen_escalado_duracion.csv          # Indicador 3: Escalado temporal por Duración
+│       ├── informe_limpieza_lol.csv               # Registro cuantitativo del pipeline de limpieza
+│       └── (archivos procesados de Instacart EV06)
 │
 ├── notebooks/
-│   ├── data_quality.ipynb             # Exploración inicial y diagnóstico de calidad
-│   └── pandas_labs.ipynb              # Desarrollo secuencial de Lecciones 2, 3 y 4 (Labs y Retos)
+│   ├── data_quality.ipynb                         # Diagnóstico de calidad del proyecto individual (EV05)
+│   ├── data_preparation.ipynb                     # Cuaderno principal EV07: Limpieza, Indicadores y Fusión LoL
+│   ├── diagnostico_calidad.ipynb                  # Copia en español del diagnóstico EV05
+│   └── pandas_labs.ipynb                          # Laboratorios guiados 2, 3, 4 y 21 retos Instacart (EV06)
 │
 └── reports/
-    ├── data_quality.md                # Informe diagnóstico de calidad inicial
-    └── data_processing_report.md      # Informe completo de limpieza, hábitos y tabla maestra
+    ├── data_quality.md                            # Informe técnico de diagnóstico de calidad inicial (EV05)
+    ├── data_preparation_report.md                 # Informe técnico completo de preparación y análisis (EV07)
+    ├── informe_diagnostico.md                     # Copia en español del informe diagnóstico EV05
+    └── data_processing_report.md                  # Informe técnico de procesamiento Instacart (EV06)
 ```
 
 ---
 
-## 4. Contenido Técnico Desarrollado
+## 5. Resumen de Transformaciones y Resultados Analíticos (EV07)
 
-### Lección 2: Limpieza y Estandarización
-- **Laboratorio Guiado 2:** Construcción de un pipeline modular encadenado con `.pipe()` y monitoreado paso a paso con la función `anotar()`.
-  - Eliminación de 15 pedidos duplicados exactos.
-  - Corrección de tipos a enteros pequeños (`int32`, `int16`, `int8`, `Int16`), logrando un **ahorro de memoria del 68.7% en `orders` y 62.5% en `order_products`**.
-  - Estandarización de 6,321 nombres de productos en `products.csv` e imputación de 1,258 nulos como `'Unknown'`.
-  - Validación automatizada mediante aserciones (`assert`).
-- **Reto 2 (7 ejercicios resueltos):**
-  1. Integridad referencial y unicidad en `order_products`.
-  2. Verificación de limpieza en catálogos `aisles` y `departments`.
-  3. Causa raíz de los 836 nulos de `add_to_cart_order` (truncamiento en carritos $\ge 65$ ítems).
-  4. Conteo y muestra de nombres estandarizados.
-  5. Series categórica de días de la semana ordenada con **93.2% de reducción de memoria**.
-  6. Justificación de preservación de transacciones con producto `'Unknown'` (9,547 filas en 8,254 pedidos).
-  7. Análisis de la implicación de nulos reales en categorías antes de agrupar.
+El cuaderno **[`notebooks/data_preparation.ipynb`](notebooks/data_preparation.ipynb)** desarrolla paso a paso las tres lecciones aplicadas al proyecto individual:
 
-### Lección 3: Filtrado, Ordenamiento y Agrupación
-- **Laboratorio Guiado 3:** Segmentación de clientes (`ocasional`, `regular`, `frecuente`) mediante `pd.cut` y cruce multivariable con franjas horarias (`madrugada`, `mañana`, `tarde`, `noche`) usando `pd.crosstab`.
-- **Reto 3 (7 ejercicios resueltos):**
-  1. Horas pico dominicales: 15:00 (7,585), 14:00 (7,533) y 13:00 (7,483).
-  2. Extremos de espera: medianoche (12.52 días) vs 22:00 h (10.62 días).
-  3. Identificación de 6,327 compradores de alta recurrencia ($\ge 10$ pedidos).
-  4. Detección de 44,577 pedidos con ciclo semanal exacto de 7 días (9.31% del total).
-  5. Identificación de 49,420 pedidos grandes ($\ge 20$ productos) y pedido récord de 127 artículos.
-  6. Análisis de la tasa de recompra decreciente por posición en el carrito (de 67.86% en pos 1 a 61.75% en pos 5).
-  7. Mediana de espera en fin de semana (8.0 días) vs semana (7.0 días).
+### Lección 2: Limpieza y Estandarización de Datos
+* **Pipeline modular con `.pipe()` y monitoreo con `anotar()`:**
+  1. **Deduplicación de clave compuesta `(Name, Role)`:** Eliminación de 4 registros secundarios repetidos en `meta_stats` (*Akali MID, Aurelion Sol MID, Cho'Gath TOP, Diana JUNGLE*), consolidando **96 combinaciones campeón-rol únicas**.
+  2. **Filtrado de partidas canceladas (*remakes*):** Exclusión de las 3 partidas con `duration_sec < 300` (213 s, 217 s y 234 s) en `matches_perf`, consolidando **497 partidas clasificatorias válidas**.
+  3. **Normalización de llave relacional (`champion_key`):** Estandarización en minúsculas sin espacios ni apóstrofos (`chogath`, `kaisa`, `khazix`, `leesin`) para resolver las 7 discrepancias entre `id` y `name`.
+  4. **Imputación justificada de valores faltantes:** Recuperación de los 4 nulos de `Class` desde `base_attributes['tags']`; imputación de `Tier` con la moda (`'A'`) y `Trend` con `0.0`; unificación de campeones sin maná con `mp = 0.0` y `partype = 'None'`; imputación de `role` por rol dominante y `damage_dealt` por mediana del campeón y carril.
+  5. **Optimización de tipos y validación con `assert`:** Conversión de porcentajes de texto (`object`) a proporción decimal (`float32`), `tier` a categoría ordenada (`S+ > S > A > B > C > D`) y reducción de memoria del **52.8%** en `meta_stats`, **28.6%** en `base_attributes` y **32.0%** en `matches_perf`, con **0 valores nulos** verificados con `assert`.
+
+### Lección 3: Filtrado, Ordenamiento, Agrupación e Indicadores
+* **Filtrado y ordenamiento:** Aplicación de máscaras booleanas, `.isin()`, `.between()`, `.query()`, `.sort_values()`, `.nlargest()` y `.nsmallest()` para identificar los 8 campeones dominantes de líneas solitarias (`TOP`/`MID`) y los 15 campeones con alerta de bloqueo crítico (`Ban Rate >= 25%` y `Win Rate >= 51%`).
+* **Indicador 1 (Balance Competitivo por Clase y Rol):** Los **Tiradores (`Marksman`)** lideran el Win Rate global (**51.54%**, y **52.14%** en `ADC`); los **Luchadores (`Fighter`)** mantienen $> 50\%$ de Win Rate en los 5 carriles del mapa; los **Asesinos (`Assassin`)** registran la mayor presión de bloqueo (**22.82% Ban Rate**), rindiendo en `JUNGLE` (**51.26%**) pero cayendo en `ADC` (**47.88%**).
+* **Indicador 2 (Curva de Efectividad según Dificultad Mecánica):** Mediante `pd.cut` y `.transform('mean')`, se demuestra la *Paradoja de la Dificultad*: los campeones de **Baja Dificultad (1–3)** alcanzan el mayor Win Rate promedio (**51.18%**) frente a los de **Media (50.57%)** y **Alta Dificultad (50.33%)**, aunque los de alta complejidad concentran la mayor selección (**10.92%**) y alto bloqueo (**20.64%**).
+* **Indicador 3 (Escalado Temporal según Duración del Encuentro):** Sobre las 497 partidas válidas, en encuentros largos ($> 35$ min, ~18,000 de oro) escalan con fuerza los **Magos (75.00% Win Rate)**, **Tiradores (62.96% Win Rate)** y **Tanques (61.11% Win Rate, donde ocurre el 55.4% de sus partidas)**, mientras que los **Asesinos** alcanzan su máximo ritmo ofensivo en partidas cortas ($< 25$ min) con **1,200.8 DPM**, descendiendo a **834.4 DPM** en juego tardío.
 
 ### Lección 4: Combinación y Estructuración de Datasets
-- **Laboratorio Guiado 4:**
-  - Construcción de la tabla analítica maestra sobre `order_products` con validación `m:1` y verificación de integridad (`assert len(maestra) == 4,545,007`).
-  - Ficha descriptiva por producto (`ficha_productos`), filtrado de significancia estadística ($\ge 1,000$ pedidos) y clasificación con `.rank()`.
-  - Exportación en formato binario columnar `Parquet` y tabular `CSV`.
-- **Reto 4 (7 ejercicios resueltos):**
-  1. Pasillos líderes en recompra: `milk` (78.13%), `water seltzer sparkling water` (73.06%) y `fresh fruits` (71.82%); pasillo menor: `spices seasonings` (15.24%).
-  2. Variación de madrugada: `beverages` entra al top 3 en la madrugada (8.49%), desplazando a `snacks`.
-  3. Top 3 snacks más vendidos: `Lightly Salted Baked Snap Pea Crisps`, `Original Veggie Straws`, `Sea Salt Pita Chips`.
-  4. Tabla analítica de 149,626 clientes (promedio: 30.38 artículos, máximo: 580 artículos).
-  5. Análisis del impacto de unión `inner` vs `left` (identificación de 28,906 pedidos sin productos registrados).
-  6. Apilado horizontal con `pd.concat` de líderes en `produce` y `dairy eggs`.
-  7. Tabla dinámica $(21 \times 7)$ departamental: el **Viernes (día 5)** lidera compras de alcohol (3,814 artículos).
+* **Integración con `pd.merge()` y validación (`validate='m:1'`, `indicator=True`):** Emparejamiento del **100%** (`both: 96` y `both: 497`) para construir la **Ficha Consolidada de Campeones** (`96 x 31`) y la **Tabla Analítica Maestra de Partidas** (`497 x 40`).
+* **Apilado y reestructuración (`pd.concat()` y `.melt()`):** Comparativa de líderes de baja vs. alta dificultad y transformación a formato largo `(18, 3)` exportada a `data/processed/` en formatos **CSV** y **Parquet**.
 
 ---
 
-## 5. Instrucciones de Ejecución
+## 6. Instrucciones de Ejecución
 
-### Prerrequisitos
-Tener instalado Python 3.10 o superior y un gestor de paquetes `pip`.
-
-### 1. Clonar el repositorio y ubicarse en la rama `ev06`:
-```bash
-git clone https://github.com/simoncarmona-dotcom/proyecto-ciencia-datos-ev05.git
-cd proyecto-ciencia-datos-ev05
-git checkout ev06
-```
-
-### 2. Instalar dependencias:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Ejecutar los Notebooks:
-Iniciar el entorno de Jupyter:
-```bash
-jupyter notebook
-```
-Abrir y ejecutar:
-- `notebooks/data_quality.ipynb`: para revisar la exploración y calidad base.
-- `notebooks/pandas_labs.ipynb`: para ejecutar el pipeline de limpieza, análisis y estructuración.
-
----
-
-## 6. Control de Versiones en GitHub
-
-Siguiendo la metodología estipulada en la guía de aprendizaje:
-* **Rama creada:** `ev06` (y `feature/pandas-data-processing`).
-* **Mensajes de confirmación (commits):**
-  - `feat: complete lesson 2 data cleaning`
-  - `feat: complete lesson 3 data analysis`
-  - `feat: complete lesson 4 data merging`
-  - `docs: update README and processing report`
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/simoncarmona-dotcom/proyecto-ciencia-datos-ev05.git
+   cd proyecto-ciencia-datos-ev05
+   ```
+2. **Instalar las dependencias:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Ejecutar los Notebooks:**
+   ```bash
+   jupyter notebook
+   ```
+   - Abrir [`notebooks/data_quality.ipynb`](notebooks/data_quality.ipynb) para consultar el diagnóstico inicial de calidad (EV05).
+   - Abrir [`notebooks/data_preparation.ipynb`](notebooks/data_preparation.ipynb) para ejecutar el pipeline completo de limpieza, cálculo de indicadores y estructuración (EV07).

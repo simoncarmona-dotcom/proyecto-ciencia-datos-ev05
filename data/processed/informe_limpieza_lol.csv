@@ -1,7 +1,10 @@
-tabla,paso,filas,nulos,memoria_kb
-meta_stats,0_crudo,100,14,12.7
-meta_stats,1_limpio,96,0,7.4
-base_attributes,0_crudo,70,14,10.5
-base_attributes,1_limpio,70,0,7.9
-matches_perf,0_crudo,500,16,48.1
-matches_perf,1_limpio,500,0,31.1
+tabla,paso,filas,columnas,nulos,memoria_kb
+base_attributes,0_crudo,70,14,14,10.5
+base_attributes,1_llave_normalizada,70,15,14,11.5
+base_attributes,2_limpio_y_tipado,70,16,0,7.5
+meta_stats,0_crudo,100,11,14,12.7
+meta_stats,1_sin_duplicados_pct_float,96,12,14,9.9
+meta_stats,2_limpio_y_tipado,96,12,0,6.0
+matches_perf,0_crudo,500,11,16,48.1
+matches_perf,1_sin_remakes_y_llave,497,12,16,54.6
+matches_perf,2_limpio_y_metricas,497,16,0,32.7
